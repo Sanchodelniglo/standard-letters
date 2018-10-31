@@ -1,0 +1,10 @@
+<h1>
+  Choisissez une catégorie pour
+  <%= @purpose.name %>
+</h1>
+
+<% @purpose.categories.each do |category| %>
+  <p>
+    <%= link_to category.name, purpose_categories_path(@purpose, category.ancestors) %>
+  </p>
+<% end %>

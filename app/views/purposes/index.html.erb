@@ -1,0 +1,7 @@
+<h1>Choisissez le type de lettre</h1>
+
+<% @purposes.each do |purpose| %>
+  <p>
+    <%= link_to purpose.name, purpose_path(purpose) %>
+  </p>
+<% end %>

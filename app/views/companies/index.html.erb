@@ -1,0 +1,7 @@
+<h1>Entreprise</h1>
+
+<% @category.companies.each do |company| %>
+  <p>
+    <%= link_to company.name, purpose_letter_path(@category.root_level.purpose, @category.ancestors, company) %>
+  </p>
+<% end %>
